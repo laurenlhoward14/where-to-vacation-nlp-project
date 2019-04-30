@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Navy Blue #042442e8 / Cream #E2DCBA / Turquoise #2a9e8df2-->
+<html>
+<head>
+  <title> Holiday Recommendations 😎</title>
+  <style>
+    body{
+      font-family: sans-serif;
+      background-color: #E2DCBA;
+    }
+    .box_outline {
+      border: 1px solid #ccc;
+      background-color:  #2a9e8df2;
+      padding: 10px;
+      box-shadow: 5px 5px 0px #eee;
+      width: 300px;
+      font-size: 18px;
+      margin: auto;
+      color: White;
+    }
+    .button {
+    background-color: #042442e8;
+    border: none;
+    color: White;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    .text {
+      color: #042442e8 ;
+    }
+  }
+
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2 class="text"> ☀️ It's Holiday Time! ☀️ </h2>
+  <h2 class="text"> 🧳 Where should you head off to? 🧳 </h2>
+  <h3 class="text"> Rank what you look for in a holiday [1 = Most, 6 = Least] </h3>
+
+<form action="/ranking_input/" method="post">
+
+    <div class="box_outline" align="center">
+
+    🥾 Walking / Tours:   <input type="number" name="walking_rank" min='1' max='6' size="50">
+      <br>
+
+      <br>
+
+    🌃 Nightlife:      <input type="number" name="nightlife_rank" min='1' max='6'>
+      <br>
+
+      <br>
+
+    🏝 Tropical Environment:   <input type="number" name="tropical_rank" min='1' max='6'>
+      <br>
+
+      <br>
+
+    🖼 Art & Culture:    <input type="number" name="art_rank" min='1' max='6'>
+      <br>
+
+      <br>
+
+
+    🍎 Food & Drink:   <input type="number" name="fandd_rank" min='1' max='6'>
+    <br>
+
+    <br>
+
+    🏛 History:  <input type="number" name="history_rank" min='1' max='6'>
+      <br>
+
+      <br>
+  </div>
+
+  <br>
+
+  <button type="submit" class="button">
+    Send me on Holiday!
+  </button>
+  </form>
+
+  {% if message %}
+  <h2 class="text">{{message}}</h2>
+  {% endif %}
+
+</body>
+</body>
+</html>
